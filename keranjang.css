@@ -1,0 +1,235 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #fdf7fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  color: #6a0572;
+  font-weight: 600;
+}
+
+/* Tombol kembali */
+.back-btn {
+  text-decoration: none;
+  color: #6a0572;
+  font-size: 0.95rem;
+  border: 1px solid #6a0572;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.back-btn:hover {
+  background-color: #6a0572;
+  color: #fff;
+}
+
+/* Snackbar */
+.snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 14px;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 16px;
+}
+
+.snackbar.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Kontrol Kuantitas */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.qty-btn {
+  padding: 4px 10px;
+  background: #f2e3f5;
+  border: 1px solid #cba3d8;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #6a0572;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.qty-btn:hover {
+  background: #e9d2f1;
+}
+
+/* Layout Utama */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.cart-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.cart-container h2 {
+  margin-bottom: 1.5rem;
+  color: #6a0572;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f4edf7;
+  color: #6a0572;
+}
+
+td small {
+  color: #777;
+  font-style: italic;
+}
+
+.remove-btn {
+  color: #e74c3c;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.remove-btn:hover {
+  text-decoration: underline;
+}
+
+/* Ringkasan */
+.cart-summary {
+  text-align: right;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.checkout-btn {
+  background-color: #6a0572;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.checkout-btn:hover {
+  background-color: #500258;
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .cart-summary {
+    text-align: left;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

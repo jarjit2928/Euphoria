@@ -1,0 +1,153 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #faf5fb;
+  color: #333;
+  padding: 20px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 2px solid #eee;
+  padding: 1rem 0 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  background-color: #fff0f5;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 2px 8px rgba(106, 5, 114, 0.05);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #6a0572;
+  font-weight: 700;
+}
+
+/* Tombol Kembali */
+.back-btn {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6a0572;
+  font-size: 1em;
+  text-decoration: none;
+  border: 2px solid #6a0572;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.back-btn:hover {
+  background-color: #6a0572;
+  color: #fff;
+}
+
+/* Kontainer utama */
+.checkout-container {
+  max-width: 600px;
+  background-color: #fff;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.checkout-container h2 {
+  margin-bottom: 1.5rem;
+  color: #6a0572;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #ab83a1;
+  box-shadow: 0 0 0 3px rgba(170, 100, 150, 0.1);
+  outline: none;
+}
+
+/* Tombol submit */
+.checkout-btn {
+  background-color: #6a0572;
+  color: white;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.checkout-btn:hover {
+  background-color: #500258;
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Animasi Fade-In */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
